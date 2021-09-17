@@ -1,0 +1,16 @@
+{% extends 'newsapp/base.html' %}
+
+{% block body %}
+<center>
+    <h3 class="h3 text-success font-italic mb-2">NairaLand</h3>
+</center>
+<div class="mx-3 mb-3">
+    {% for text, link in data.links_data %}
+    <div class="card card-body">
+        <a href="{{link}}" class="text-info lead">
+            {{text}}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
